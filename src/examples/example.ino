@@ -1,10 +1,5 @@
 
-#include <WiFiWebServer.h>
-#include <EEPROM.h>
-#include "secrets.h"
-#include "utils.h"
-#include "eepromManager.h"
-#include "apServer.h"
+#include <InoWiFiProvisioning.h>
 
 void setup() {
   // Initialize serial communication
