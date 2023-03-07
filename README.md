@@ -1,5 +1,5 @@
 
-# Arduino WiFi Provisioning
+# InoWifiProvisioning
 
 #### Wifi provisioning for WiFiWebManager and EEPROM supported boards.
 
