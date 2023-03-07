@@ -1,5 +1,5 @@
 
-# InoWifiProvisioning
+# Arduino WiFi Provisioning
 
 #### Wifi provisioning for WiFiWebManager and EEPROM supported boards.
 
@@ -8,6 +8,7 @@
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/) 
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](#Contributing)
+[![GitHub release](https://img.shields.io/badge/release-pre-orange)](https://github.com/Suffro/InoWifiProvisioning/releases)
 ### Features
 
 - Connect your board to WiFi network from a browser.
