@@ -4,12 +4,11 @@
 #### Wifi provisioning for WiFiWebManager and EEPROM supported boards.
 
 
-
-<a href="https://www.buymeacoffee.com/suffro" title="Donate to my contributions using BuyMeACoffee"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Donate to my contributions using BuyMeACoffee" style="height: 50px !important;width: 181px !important;" ></a>
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/) 
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](#Contributing)
 [![GitHub release](https://img.shields.io/badge/release-pre-orange)](https://github.com/Suffro/InoWifiProvisioning/releases)
 
+<a href="https://www.buymeacoffee.com/suffro" title="Donate to my contributions using BuyMeACoffee"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Donate to my contributions using BuyMeACoffee" style="height: 50px !important;width: 181px !important;" ></a>
 
 ### Features
 
@@ -30,5 +29,3 @@
 ## Authors
 
 - [Lorenzo Suffritti](https://github.com/Suffro)
-
-<a href="https://www.buymeacoffee.com/suffro" title="Donate to my contributions using BuyMeACoffee"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Donate to my contributions using BuyMeACoffee" style="height: 50px !important;width: 181px !important;" ></a>
