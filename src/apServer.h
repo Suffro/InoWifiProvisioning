@@ -18,10 +18,18 @@ void connectWifi(){
     Serial.println(pass);
     Serial.println();
 
-    while (WiFi.status() != WL_CONNECTED) {
+    Serial.print("Connecting to Wi-Fi.");
+    int attempts = 0;
+    while (WiFi.status() != WL_CONNECTED && attempts<=30) {
       delay(1000);
-      Serial.println("Connecting to Wi-Fi...");
+      attempts++;
+      Serial.print(".");
     }
+    if(WiFi.status() != WL_CONNECTED) {
+      Serial.println();
+      Serial.println("Failed to connect to the network.");
+      clearCredentials();
+    };
     Serial.println("");
     Serial.print("Connected to Wi-Fi with SSID ");
     Serial.println(ssid);
