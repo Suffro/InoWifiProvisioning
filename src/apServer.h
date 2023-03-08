@@ -78,21 +78,22 @@ void handleProvisioningServer(){
 
     // Check if the request is for the Wi-Fi credentials page
     if (request.indexOf("/wifi") != -1) {
-      // Send the Wi-Fi credentials page to the client
+      // Send the Wi-Fi credentials page to the client<meta name='viewport' content='width=device-width,initial-scale=1'>
       client.println("<html>");
       client.println("<head>");
-      client.println("<title>Enter Wi-Fi Credentials</title>");
+      client.println("<meta charset='UTF-8'>");
+      client.println("<meta name='viewport' content='width=device-width,initial-scale=1'>");
+      // client.println("<link rel='icon' type='image/x-icon' href='https://www.arduino.cc/favicon.ico'>");
+      client.println("<title>Connect Wifi</title>");
       client.println("<style>");
-      client.println("body{font-family:\"Helvetica\",sans-serif;color:#333;background-color:#fff;padding:20px}h2{width:100%;text-align: center;font-size:24px;font-weight:bold;color:#004080;margin-bottom:1rem;margin-top:50px;}form{display:flex;flex-direction:column;align-items:flex-start;width:300px;margin:0 auto;padding:20px;background-color:rgba(0,128,128,0.1);border-radius:5px}input[type=\"text\"],input[type=\"password\"]{font-size:1rem;padding:0.5rem;border:2px solid #004080;border-radius:4px;margin-bottom:1rem;width:100%}input[type=\"submit\"]{font-size:1rem;padding:0.5rem 1rem;background-color:#004080;color:#fff;border:none;border-radius:4px;cursor:pointer;transition:all 0.3s ease}input[type=\"submit\"]:hover{background-color:#002233}");
+      client.println("body{font-family:Helvetica,sans-serif;background-color:#fff; padding:8px;}.container{display:flex;flex-direction:column;justify-content:center;align-items:center;height:100vh}.logo{margin-bottom:1.5rem}.title{font-weight:700;font-size:2rem;margin-bottom:1.5rem;text-align:center;color:#212121}.form{background-color:#fff;padding:2rem;box-shadow:0 1px 2px rgba(0,0,0,.1);border-radius:.5rem;max-width:25rem;width:100%}.input{display:block;width:100%;padding:.75rem;margin-top:.5rem;border-radius:.25rem;border:1px solid #cbd5e0;background-color:#f3f4f6;color:#1f2937;font-size:1rem;font-weight:400;line-height:1.5;transition:border-color .15s ease-in-out,box-shadow .15s ease-in-out}.input:focus{outline:0;border-color:#f59e0b;box-shadow:0 0 0 2px #fde68a}.label{display:block;font-size:.875rem;font-weight:600;line-height:1.5;margin-bottom:.5rem;color:#374151}.button{display:flex;justify-content:center;align-items:center;background-color:#00979C;color:#fff;font-weight:600;font-size:1rem;border-radius:.25rem;padding:.5rem 1rem;transition:background-color .15s ease-in-out;margin-top:1rem;border-style:none}.button:hover{background-color:#96D9D9}");
       client.println("</style>");
       client.println("</head>");
       client.println("<body>");
-      client.println("<h2>Enter Wi-Fi Credentials</h2>");
-      client.println("<form method='POST' action='/save'>");
-      client.println("SSID: <input type='text' name='ssid'><br>");
-      client.println("Password: <input type='password' name='pass'><br>");
-      client.println("<input type='submit' value='Save'>");
-      client.println("</form>");
+      client.println("<div class='container'>");
+      // client.println("<img class='logo' src='https://www.arduino.cc/favicon.ico' alt='Arduino logo'>");
+      client.println("<h2 class='title'>Enter Wifi Credentials</h2><div class='form'><form action='/save' method='POST'><label for='ssid' class='label'>Network name</label><input id='ssid' name='ssid' type='text' required class='input' placeholder='Enter your network name'><br><label for='pass' class='label'>Passowrd</label><input id='pass' name='pass' type='password' class='input' placeholder='Enter your network password'><button class='button'>Save and Connect</button></form></div>");
+      client.println("</div>");
       client.println("</body>");
       client.println("</html>");
     }
@@ -126,18 +127,24 @@ void handleProvisioningServer(){
       // Send a response to the client
       client.println("<html>");
       client.println("<head>");
+      client.println("<meta charset='UTF-8'>");
+      client.println("<meta name='viewport' content='width=device-width,initial-scale=1'>");
+      // client.println("<link rel='icon' type='image/x-icon' href='https://www.arduino.cc/favicon.ico'>");
+      client.println("<title>Connect Wifi</title>");
       client.println("<style>");
-      client.println("body{font-family:\"Helvetica\",sans-serif;color:#333;background-color:#fff;padding:20px}h2{width:100%;font-size:24px;font-weight:bold;color:#004080;margin-bottom:1rem;margin-top:50px;}");
+      client.println("body{font-family:Helvetica,sans-serif;background-color:#fff; padding:8px;}.container{display:flex;flex-direction:column;justify-content:center;align-items:center;height:100vh}.logo{margin-bottom:1.5rem}.title{font-weight:700;font-size:2rem;margin-bottom:1.5rem;text-align:center;color:#212121}.form{background-color:#fff;padding:2rem;box-shadow:0 1px 2px rgba(0,0,0,.1);border-radius:.5rem;max-width:25rem;width:100%}.input{display:block;width:100%;padding:.75rem;margin-top:.5rem;border-radius:.25rem;border:1px solid #cbd5e0;background-color:#f3f4f6;color:#1f2937;font-size:1rem;font-weight:400;line-height:1.5;transition:border-color .15s ease-in-out,box-shadow .15s ease-in-out}.input:focus{outline:0;border-color:#f59e0b;box-shadow:0 0 0 2px #fde68a}.label{display:block;font-size:.875rem;font-weight:600;line-height:1.5;margin-bottom:.5rem;color:#374151}.button{display:flex;justify-content:center;align-items:center;background-color:#00979C;color:#fff;font-weight:600;font-size:1rem;border-radius:.25rem;padding:.5rem 1rem;transition:background-color .15s ease-in-out;margin-top:1rem;border-style:none}.button:hover{background-color:#96D9D9}");
       client.println("</style>");
       client.println("</head>");
       client.println("<body>");
-      client.println("<h2>Wi-Fi Credentials Saved!</h2>");
-      client.println("<p>The device will now try to connect to Wi-Fi using the saved credentials. Please wait a moment.</p>");
-      client.println("</p>");
+      client.println("<div class='container'>");
+      // client.println("<img class='logo' src='https://www.arduino.cc/favicon.ico' alt='Arduino logo'>");
+      client.println("<h2 class='title'>Credentials saved</h2>");
+      client.println("<p>Credentials saved, the board will now try to connect.</p>");
+      client.println("</div>");
       client.println("</body>");
       client.println("</html>");
 
-      delay(100);
+      delay(500);
 
       connectWifi();
     }
@@ -148,17 +155,26 @@ void handleProvisioningServer(){
       client.println();
       client.println("<html>");
       client.println("<head>");
+      client.println("<meta charset='UTF-8'>");
+      client.println("<meta name='viewport' content='width=device-width,initial-scale=1'>");
+      // client.println("<link rel='icon' type='image/x-icon' href='https://www.arduino.cc/favicon.ico'>");
+      client.println("<title>Connect Wifi</title>");
       client.println("<style>");
-      client.println("body{font-family:\"Helvetica\",sans-serif;color:#333;background-color:#fff;padding:20px}h1{width:100%;font-size:36px;font-weight:bold;color:#004080;margin-bottom:1rem;margin-top:50px;}");
+      client.println("body{font-family:Helvetica,sans-serif;background-color:#fff; padding:8px;}.container{display:flex;flex-direction:column;justify-content:center;align-items:center;height:100vh}.logo{margin-bottom:1.5rem}.title{font-weight:700;font-size:2rem;margin-bottom:1.5rem;text-align:center;color:#212121}.form{background-color:#fff;padding:2rem;box-shadow:0 1px 2px rgba(0,0,0,.1);border-radius:.5rem;max-width:25rem;width:100%}.input{display:block;width:100%;padding:.75rem;margin-top:.5rem;border-radius:.25rem;border:1px solid #cbd5e0;background-color:#f3f4f6;color:#1f2937;font-size:1rem;font-weight:400;line-height:1.5;transition:border-color .15s ease-in-out,box-shadow .15s ease-in-out}.input:focus{outline:0;border-color:#f59e0b;box-shadow:0 0 0 2px #fde68a}.label{display:block;font-size:.875rem;font-weight:600;line-height:1.5;margin-bottom:.5rem;color:#374151}.button{display:flex;justify-content:center;align-items:center;background-color:#00979C;color:#fff;font-weight:600;font-size:1rem;border-radius:.25rem;padding:.5rem 1rem;transition:background-color .15s ease-in-out;margin-top:1rem;border-style:none}.button:hover{background-color:#96D9D9}");
       client.println("</style>");
       client.println("</head>");
       client.println("<body>");
-      client.println("<h1>404 Not Found</h1>");
-      client.println("<p>The requested page could not be found.</p>");
+      client.println("<div class='container'>");
+      // client.println("<img class='logo' src='https://www.arduino.cc/favicon.ico' alt='Arduino logo'>");
+      client.println("<h2 class='title'>404</h2>");
+      client.println("<p>Sorry, the requested resource was not found.</p>");
+      client.println("</div>");
       client.println("</body>");
       client.println("</html>");
-    }
 
+    }
+    
+    delay(500);
     // Disconnect from the client
     client.stop();
   }
