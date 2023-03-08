@@ -14,6 +14,7 @@
 
 - Connect your board to WiFi network from a browser.
 - Cache wifi credentials.
+- Reset credentials.
 
 
 ### Dependencies
