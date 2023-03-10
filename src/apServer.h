@@ -18,7 +18,7 @@ void connectWifi(){
     Serial.println(pass);
     Serial.println();
 
-    Serial.print("Connecting to Wi-Fi.");
+    Serial.print("Connecting to Wi-Fi...");
     int attempts = 0;
     while (WiFi.status() != WL_CONNECTED && attempts<=30) {
       delay(1000);
