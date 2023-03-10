@@ -1,7 +1,7 @@
 
 # Arduino WiFi Provisioning
 
-#### Wifi provisioning for WiFiWebManager and EEPROM supported boards.
+#### Wifi provisioning for WiFiWebManager and EEPROM/FlashStorage supported boards.
 
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/) 
