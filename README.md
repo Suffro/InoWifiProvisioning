@@ -26,6 +26,11 @@
 - [**EEPROM**](https://docs.arduino.cc/learn/built-in-libraries/eeprom)
     - [Guide](https://docs.arduino.cc/learn/programming/eeprom-guide)
 
+- [**FlashStorage**](https://github.com/cmaglie/FlashStorage)
+    - [FlashAsEEPROM](https://github.com/cmaglie/FlashStorage/blob/master/src/FlashAsEEPROM.h)
+    
+**NOTE:** Flash Storage is used alternatively to EEPROM when EEPROM is not supported.
+
 
 ## Authors
 
