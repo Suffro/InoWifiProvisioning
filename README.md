@@ -3,6 +3,8 @@
 
 #### Wifi provisioning for WiFiWebManager and EEPROM/FlashStorage supported boards.
 
+Feel free to contribute to this library to make it more secure and efficent.
+
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/) 
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](#Contributing)
