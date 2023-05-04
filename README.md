@@ -6,7 +6,7 @@
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/) 
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](#Contributing)
-[![GitHub release (latest by date)](https://img.shields.io//github/v/release/Suffro/InoWifiProvisioning?display_name=tag&include_prereleases)](#)
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/Suffro/InoWifiProvisioning?display_name=tag&include_prereleases)](#)
 [![GitHub issues](https://img.shields.io/github/issues/Suffro/InoWifiProvisioning)](https://github.com/Suffro/InoWifiProvisioning/issues)
 
 <a href="https://www.buymeacoffee.com/suffro" title="Donate to my contributions using BuyMeACoffee"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Donate to my contributions using BuyMeACoffee" style="height: 50px !important;width: 181px !important;" ></a>
