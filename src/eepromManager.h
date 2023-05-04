@@ -24,8 +24,6 @@ void retreiveCredentials() {
   
   Serial.print("Ssid from EEPROM: ");
   Serial.println(ssid);
-  Serial.print("Pass from EEPROM: ");
-  Serial.println(pass);
 }
 
 void clearCredentials() {
