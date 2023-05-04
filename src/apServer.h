@@ -14,8 +14,6 @@ void connectWifi(){
     Serial.println("Attempting to connect to network:");
     Serial.print("SSID: ");
     Serial.println(ssid);
-    Serial.print("PASS: ");
-    Serial.println(pass);
     Serial.println();
 
     Serial.print("Connecting to Wi-Fi...");
@@ -42,7 +40,7 @@ void initProvisioningServer(){
   if(!credentialsSaved()){
     Serial.println("No credentials retreived, starting server.");
     // Set up soft AP with a custom SSID and password
-    WiFi.beginAP("arduino", "arduino123");
+    WiFi.beginAP("arduino", arduinoPass);
 
     // Print the IP address of the access point
     Serial.print("IP address: ");
@@ -92,7 +90,7 @@ void handleProvisioningServer(){
       client.println("<body>");
       client.println("<div class='container'>");
       // client.println("<img class='logo' src='https://www.arduino.cc/favicon.ico' alt='Arduino logo'>");
-      client.println("<h2 class='title'>Enter Wifi Credentials</h2><div class='form'><form action='/save' method='POST'><label for='ssid' class='label'>Network name</label><input id='ssid' name='ssid' type='text' required class='input' placeholder='Enter your network name'><br><label for='pass' class='label'>Passowrd</label><input id='pass' name='pass' type='password' class='input' placeholder='Enter your network password'><button class='button'>Save and Connect</button></form></div>");
+      client.println("<h2 class='title'>Enter Wifi Credentials</h2><div class='form'><form action='/save' method='POST'><label for='ssid' class='label'>Network name</label><input id='ssid' name='ssid' type='text' required class='input' placeholder='Enter your network name'><br><label for='pass' class='label'>Password</label><input id='pass' name='pass' type='password' class='input' placeholder='Enter your network password'><button class='button'>Save and Connect</button></form></div>");
       client.println("</div>");
       client.println("</body>");
       client.println("</html>");
